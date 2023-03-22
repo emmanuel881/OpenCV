@@ -1,6 +1,7 @@
 import tensorflow as tf
 from keras.models import load_model
 import numpy as np
+import matplotlib.pyplot as plt
 
 
 gender_model = load_model('gender_detection_model.h5')
@@ -38,4 +39,6 @@ def predict_gender_age_image(image):
     # Display the image
     plt.imshow(cv2.cvtColor(image, cv2.COLOR_BGR2RGB))
     plt.show()
+# Load the image
+image = cv2.imread('example_image.jpg')
 
